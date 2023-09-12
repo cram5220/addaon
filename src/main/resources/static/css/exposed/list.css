@@ -1,0 +1,48 @@
+
+table {
+	font-size: 11px;
+	text-align:center;
+}
+th {
+	font-size: 12px;
+	/*background-color:aliceblue;*/
+}
+td {
+	font-size: 11px;
+	/*border: 1px solid gainsboro;*/
+}
+
+#postInfoInputArea input[type=text] {
+    min-width: 200px;
+	max-width: 300px;
+}
+
+#exposedListArea {
+	margin-top: 25px;
+}
+
+
+#exposedListArea > table th:nth-child(1){
+	width: 30px;
+}
+
+#exposedListArea > table th:nth-child(2){
+	min-width: 100px;
+}
+
+
+#exposedListArea > table th:nth-child(5){
+	width: 40px;
+}
+
+
+#exposedListArea > table tr td:nth-child(2){
+	font-weight: bold;
+}
+
+
+
+#exposedListArea > table tr td:nth-child(5){
+	font-size: 9px;
+	color: #c00;
+}

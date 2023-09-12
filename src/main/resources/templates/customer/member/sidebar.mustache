@@ -1,0 +1,31 @@
+<div style="display:inline-block; float: left;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            <span class="fs-4">계정 관리</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="/member/info" class="nav-link link-dark" aria-current="page"> <!-- .active 넣으면 파래짐 -->
+                    이용 중인 플랜
+                </a>
+            </li>
+            <li>
+                <a href="/member/payHis" class="nav-link link-dark">
+                    결제 내역
+                </a>
+            </li>
+            <li>
+                <a href="/member/asking" class="nav-link link-dark">
+                    1:1 문의내역
+                </a>
+            </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+                <img src="{{user.picture}}" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>{{user.email}}</strong>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+{{>admin/layout/header}}
+{{>admin/layout/navigator}}
+<div>
+    <div class="container">
+        <!-- 좌측영역 -->
+        <div>
+            <ul>
+                <li>전체</li>
+                <li>서비스 관련</li>
+                <li>결제 관련</li>
+                <li>계정 관련</li>
+                <li>그 외</li>
+            </ul>
+        </div>
+        <!-- 우측영역 -->
+        <div>
+            <!-- 상단 : 검색 옵션 -->
+            <div>
+                <select>
+                    <option>전체</option>
+                    <option>답변 미완료</option>
+                    <option>답변 완료</option>
+                </select>
+            </div>
+            <!-- 중단 : 목록 -->
+            <div>
+                <table>
+                    <tr class="headerRow">
+                        <th>no</th>
+                        <th>카테고리</th>
+                        <th>작성자</th>
+                        <th>제목</th>
+                        <th>작성일</th>
+                        <th>답변여부</th>
+                    </tr>
+                    {{#askList}}
+                    <tr>
+                        <td>{{idx}}</td>
+                        <td>{{category}}</td>
+                        <td>{{writor}}</td>
+                        <td>{{title}}</td>
+                        <td>{{createdDate}}</td>
+                        <td>{{isAnswered}}</td>
+                    </tr>
+                    {{/askList}}
+                </table>
+            </div>
+            <!-- 하단 : 페이징 -->
+            <div></div>
+        </div>
+    </div>
+</div>
+{{>admin/layout/includeJs}}
+<script src="/js/keyword/list.js"></script>
+{{>admin/layout/footer}}

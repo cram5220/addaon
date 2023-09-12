@@ -1,0 +1,14 @@
+/* @import url(/css/font/font.css); */
+/*초기화*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, thead { margin:0; padding:0 }
+body, input, textarea, select, button,dl,dt{ font-size:14px; line-height:1.25em; }
+html, body { height: 100%; padding:0; margin:0; }
+img, fieldset { border:0 }
+ul, ol { list-style:none }
+em, address { font-style:normal }
+a { text-decoration:none;
+    display: inline-block; }
+a:hover, a:active, a:focus { font-weight:bold; }
+table{
+	border-collapse:collapse;
+}

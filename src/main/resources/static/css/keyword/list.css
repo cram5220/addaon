@@ -1,0 +1,80 @@
+
+table {
+	font-size: 11px;
+	text-align:center;
+}
+th {
+	font-size: 12px;
+	/*background-color:aliceblue;*/
+}
+td {
+	font-size: 11px;
+	/*border: 1px solid gainsboro;*/
+}
+
+#keywordInputArea {
+    min-width: 200px;
+	max-width: 300px;
+}
+
+#searchResultArea {
+	margin-top: 25px;
+}
+
+#searchResultArea .keywordCol > .tooltipText {
+    display: none;
+}
+
+#searchResultArea > table th:nth-child(1){
+	width: 30px;
+}
+
+#searchResultArea > table th:nth-child(2){
+	min-width: 80px;
+}
+
+#searchResultArea > table th:nth-child(3){
+	width: 80px;
+}
+
+
+#searchResultArea > table th:nth-child(6){
+	width: 40px;
+}
+
+
+#searchResultArea > table tr.keywordMainRow td:nth-child(2){
+	font-weight: bold;
+}
+
+#searchResultArea > table tr.keywordMainRow td:nth-child(3){
+	font-size: 10px;
+}
+
+#searchResultArea > table tr.keywordMainRow td:nth-child(4){
+	min-width: 140px;
+}
+
+#searchResultArea > table tr:NOT(.keywordMainRow) td:nth-child(2),
+#searchResultArea > table tr.keywordMainRow td:nth-child(5){
+	text-align: left;
+	font-size: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#searchResultArea > table tr.keywordMainRow td:nth-child(6){
+	font-size: 9px;
+	color: #c00;
+}
+
+#searchResultArea > #tooltip {
+    display: none;
+    position: absolute;
+    width: 300px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 8px;
+    border-radius:5px;
+}

@@ -1,0 +1,76 @@
+buildscript {
+    ext {
+        springBootVersion = '2.6.4'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+
+group 'com.nsearchlist'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 17
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation('org.springframework.boot:spring-boot-starter-web')
+
+    //lombok
+    implementation('org.projectlombok:lombok')
+    annotationProcessor('org.projectlombok:lombok')
+
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+
+    testImplementation('com.h2database:h2')
+
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
+
+    testImplementation(platform('org.junit:junit-bom:5.8.2')) //이거 버전빼고도 잘 작동하는지 확인
+    //testImplementation('org.junit.jupiter:junit-jupiter')
+
+    implementation('org.springframework.boot:spring-boot-starter-oauth2-client')
+
+    implementation('org.springframework.session:spring-session-jdbc')
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    testImplementation('org.springframework.security:spring-security-test')
+    implementation('org.bouncycastle:bcprov-jdk16:1.45')
+
+    //db
+    implementation('org.springframework.boot:spring-boot-starter-jdbc')
+    implementation('com.microsoft.sqlserver:mssql-jdbc')
+
+}
+
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.nsearchlist.Application'
+    }
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}

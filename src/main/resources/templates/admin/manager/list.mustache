@@ -1,0 +1,38 @@
+{{>admin/layout/header}}
+{{>admin/layout/navigator}}
+<div>
+    <div class="container">
+        <!-- 상단 : 검색 옵션 -->
+        <div>
+            <select>
+                <option>상태</option>
+                <option>대기중</option>
+                <option>재직중</option>
+                <option>퇴직</option>
+            </select>
+            <input type="text" maxlength="20" placeholder="이름">
+            <button>검색</button>
+        </div>
+        <!-- 중단 : 목록 -->
+        <div>
+            <table>
+                <tr class="headerRow">
+                    <th>아이디</th>
+                    <th>성명</th>
+                    <th>상태</th>
+                    <th>보기</th>
+                </tr>
+                {{#managerList}}
+                    <tr memberIdx="{{memberIdx}}">
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{status}}</td>
+                        <td>자세히 보기</td>
+                    </tr>
+                {{/managerList}}
+        </div>
+    </div>
+</div>
+{{>admin/layout/includeJs}}
+<script src="/js/keyword/list.js"></script>
+{{>admin/layout/footer}}
